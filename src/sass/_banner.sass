@@ -1,0 +1,28 @@
+.banner
+    &-img
+        background: url(../img/fon.png) center / cover no-repeat
+        background-color: $color-blue-dark
+        grid-column: full-start/ col-end 4
+        display: grid
+        grid-template-columns: repeat(16, 1fr)
+        grid-template-rows: repeat(24, 1fr)
+        &__img-1
+            width: 100%
+            grid-area: 3 / 3 / 16 / 15
+        &__img-2
+            width: 100%
+            grid-area: 10 / 6 / 24 / -1
+            transform: translateX(3rem)
+    &-text
+        background: $color-blue-dark
+        grid-column: col-end 4 / full-end
+        padding: 0 4vw
+        // display: flex
+        // flex-direction: column
+        // justify-content: center
+        // align-items: flex-start
+        display: grid
+        align-content: center
+        justify-items: start
+        &__text
+            margin-bottom: 4rem

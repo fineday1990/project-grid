@@ -6,23 +6,29 @@
         display: grid
         grid-template-columns: repeat(16, 1fr)
         grid-template-rows: repeat(24, 1fr)
+        @include respond(tab-port)
+            grid-column: 1/-1
         &__img-1
             width: 100%
             grid-area: 3 / 3 / 16 / 15
+            @include respond(tab-port)
+                grid-area: 2 / 2 / 15 / 11
         &__img-2
             width: 100%
             grid-area: 10 / 6 / 24 / -1
             transform: translateX(3rem)
+            @include respond(tab-port)
+                grid-area: 9 / 8 / 23 / 16
     &-text
         background: $color-blue-dark
         grid-column: col-end 4 / full-end
         padding: 0 4vw
-        // display: flex
-        // flex-direction: column
-        // justify-content: center
-        // align-items: flex-start
         display: grid
         align-content: center
         justify-items: start
+        @include respond(tab-port)
+            grid-column: 1/-1
+            grid-row: 5/6
+            padding: 4rem
         &__text
             margin-bottom: 4rem
